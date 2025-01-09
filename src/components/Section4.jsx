@@ -1,9 +1,10 @@
 import React from "react";
 import img from "../assets/22.jpeg";
+import { Link } from "react-router-dom";
 
 const Section4 = () => {
   return (
-    <section className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
+    <section id="article" className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
       <div className="2xl:container mx-auto">
         <div>
           <span className="font-semibold text-lg">4 - Article And News</span>
@@ -18,9 +19,9 @@ const Section4 = () => {
                 possimus! Dolorum, laudantium recusandae.
               </p>
               <div className="mt-10">
-                <a href="" className="px-5 py-3 bg-[#4343a9] text-white">
+                <Link to="/articles" className="px-5 py-3 bg-[#4343a9] text-white">
                   See More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Elephant Migration Patterns",
+      "description": "Explore the fascinating migratory behavior of elephants and their role in the ecosystem.",
+      "image": "https://source.unsplash.com/400x300/?wildlife",
+      "content": "Elephants are known for their incredible memory and complex social structure. Migratory patterns are essential for their survival as they move in search of food, water, and mating opportunities. Conservation efforts are underway to protect these majestic creatures.",
+      "link": "/articles/elephant-migration"
+    },
+    {
+      "id": 2,
+      "title": "The Role of Bees in Ecosystems",
+      "description": "Learn about the importance of bees in pollination and biodiversity.",
+      "image": "https://source.unsplash.com/400x300/?bees",
+      "content": "Bees are vital pollinators that contribute to the reproduction of plants, which in turn support entire ecosystems. A decline in bee populations can lead to ecological imbalance and food insecurity.",
+      "link": "/articles/bees-role"
+    },
+    {
+      "id": 3,
+      "title": "Conserving Rainforests",
+      "description": "Discover the efforts being made to protect our planet's rainforests.",
+      "image": "https://source.unsplash.com/400x300/?forest",
+      "content": "Rainforests are home to diverse species and act as Earth's lungs, absorbing carbon dioxide and producing oxygen. Conservation initiatives aim to combat deforestation and habitat destruction.",
+      "link": "/articles/conserving-rainforests"
+    }
+  ]
+  

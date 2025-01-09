@@ -1,9 +1,10 @@
 import React from "react";
 import img from "../assets/22.jpeg";
+import { Link } from "react-router-dom";
 
 const Section3 = () => {
   return (
-    <section className="px-[5%] lg:px-[10%]">
+    <section id="hotline" className="px-[5%] lg:px-[10%]">
       <div className="flex flex-col lg:flex-row 2xl:container mx-auto relative">
         <div
           className="w-full flex lg:w-1/2 h-[30rem]"
@@ -41,9 +42,9 @@ const Section3 = () => {
             </p>
           </div>
           <div className="mt-10 mb-5 flex justify-between items-center">
-            <a href="" className="px-10 py-3 bg-[#4343a9] text-white">
+            <Link to='/hotline' className="px-10 py-3 bg-[#4343a9] text-white">
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
