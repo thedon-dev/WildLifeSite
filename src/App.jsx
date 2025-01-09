@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import AboutPage from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
 import LoginPage from "./pages/Login";
+import DiscoverMorePage from "./pages/DiscoverPage";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/article/:id" element={<ArticlePage />} />
           <Route path="/hotline" element={<HotlinePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/discovermore" element={<DiscoverMorePage />} />
         </Routes>
       </RouteWrapper>
     </BrowserRouter>

@@ -17,6 +17,7 @@ const ArticlesPage = () => {
     }
 
     fetchArticles()
+    window.scrollTo(0, 0)
   }, []);
 
   if (loading) {
