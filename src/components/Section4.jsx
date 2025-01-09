@@ -29,25 +29,25 @@ const ArticlesPage = () => {
     }
   ]
   );
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(false); 
 
-  useEffect(() => {
-    fetch("/articles.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch articles.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setArticles(data.articles);
-        setLoading(false); 
-      })
-      .catch((error) => {
-        console.error("Error fetching articles:", error);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/articles.json")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch articles.");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setArticles(data.articles);
+  //       setLoading(false); 
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching articles:", error);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   if (loading) {
     return (

@@ -8,7 +8,7 @@ const ArticlesPage = () => {
       "description": "Explore the journey and challenges faced in protecting one of the most endangered species on Earth.",
       "content": "Rhinos are among the most threatened species in the world, facing poaching and habitat loss. Through conservation efforts, dedicated teams are working tirelessly to ensure their survival for future generations...",
       "image": "https://example.com/rhino.jpg",
-      "link": "/articles/1"
+      "link": "/article/1"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@ const ArticlesPage = () => {
       "description": "Learn about the incredible migration of elephants across Africa.",
       "content": "Elephants embark on one of the most extraordinary migrations on Earth. Driven by seasons and survival instincts, their journey showcases the strength and perseverance of these majestic creatures...",
       "image": "https://example.com/elephants.jpg",
-      "link": "/articles/2"
+      "link": "/article/2"
     },
     {
       "id": 3,
@@ -24,30 +24,30 @@ const ArticlesPage = () => {
       "description": "An in-depth look into the behaviors and habits of wild tigers.",
       "content": "Tigers are solitary and territorial animals. This article explores their hunting patterns, mating rituals, and the challenges they face due to habitat destruction and poaching...",
       "image": "https://example.com/tigers.jpg",
-      "link": "/articles/3"
+      "link": "/article/3"
     }
   ]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(false); 
 
-  useEffect(() => {
-    fetch("/articles.json") 
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch articles");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setArticles(data);
-        setLoading(false); 
-      })
-      .catch((error) => {
-        console.error("Error fetching articles:", error);
-        setLoading(false); 
-      });
+//   useEffect(() => {
+//     fetch("/articles.json") 
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Failed to fetch articles");
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         setArticles(data);
+//         setLoading(false); 
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching articles:", error);
+//         setLoading(false); 
+//       });
 
-    window.scrollTo(0, 0);
-  }, []);
+//     window.scrollTo(0, 0);
+//   }, []);
 
   if (loading) {
     return (
