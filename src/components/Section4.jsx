@@ -4,32 +4,37 @@ import { Link } from "react-router-dom";
 const ArticlesPage = () => {
   const [articles, setArticles] = useState([
     {
-      "id": 1,
-      "title": "Saving the Endangered Rhino",
-      "description": "Explore the journey and challenges faced in protecting one of the most endangered species on Earth.",
-      "content": "Rhinos are among the most threatened species in the world, facing poaching and habitat loss. Through conservation efforts, dedicated teams are working tirelessly to ensure their survival for future generations...",
-      "image": "https://example.com/rhino.jpg",
-      "link": "/articles/1"
+      id: 1,
+      title: "Saving the Endangered Rhino",
+      description:
+        "Explore the journey and challenges faced in protecting one of the most endangered species on Earth.",
+      content:
+        "Rhinos are among the most threatened species in the world, facing poaching and habitat loss. Through conservation efforts, dedicated teams are working tirelessly to ensure their survival for future generations...",
+      image: "https://example.com/rhino.jpg",
+      link: "/article/1",
     },
     {
-      "id": 2,
-      "title": "The Journey of Migrating Elephants",
-      "description": "Learn about the incredible migration of elephants across Africa.",
-      "content": "Elephants embark on one of the most extraordinary migrations on Earth. Driven by seasons and survival instincts, their journey showcases the strength and perseverance of these majestic creatures...",
-      "image": "https://example.com/elephants.jpg",
-      "link": "/articles/2"
+      id: 2,
+      title: "The Journey of Migrating Elephants",
+      description:
+        "Learn about the incredible migration of elephants across Africa.",
+      content:
+        "Elephants embark on one of the most extraordinary migrations on Earth. Driven by seasons and survival instincts, their journey showcases the strength and perseverance of these majestic creatures...",
+      image: "https://example.com/elephants.jpg",
+      link: "/article/2",
     },
     {
-      "id": 3,
-      "title": "The Secret Life of Tigers",
-      "description": "An in-depth look into the behaviors and habits of wild tigers.",
-      "content": "Tigers are solitary and territorial animals. This article explores their hunting patterns, mating rituals, and the challenges they face due to habitat destruction and poaching...",
-      "image": "https://example.com/tigers.jpg",
-      "link": "/articles/3"
-    }
-  ]
-  );
-  const [loading, setLoading] = useState(false); 
+      id: 3,
+      title: "The Secret Life of Tigers",
+      description:
+        "An in-depth look into the behaviors and habits of wild tigers.",
+      content:
+        "Tigers are solitary and territorial animals. This article explores their hunting patterns, mating rituals, and the challenges they face due to habitat destruction and poaching...",
+      image: "https://example.com/tigers.jpg",
+      link: "/article/3",
+    },
+  ]);
+  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   fetch("/articles.json")
@@ -41,7 +46,7 @@ const ArticlesPage = () => {
   //     })
   //     .then((data) => {
   //       setArticles(data.articles);
-  //       setLoading(false); 
+  //       setLoading(false);
   //     })
   //     .catch((error) => {
   //       console.error("Error fetching articles:", error);
@@ -58,7 +63,7 @@ const ArticlesPage = () => {
   }
 
   return (
-    <section className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
+    <section id="articles" className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
       <div className="2xl:container mx-auto">
         <h1 className="text-4xl font-bold mb-10">Articles</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
@@ -71,7 +76,7 @@ const ArticlesPage = () => {
               <p className="text-gray-600">{article.description}</p>
               <div className="mt-5">
                 <Link
-                  to={`/articles/${article.id}`}
+                  to={`/article/${article.id}`}
                   className="text-blue-500 hover:underline"
                 >
                   Read More

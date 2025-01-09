@@ -15,8 +15,8 @@ function App() {
     <BrowserRouter>
       <RouteWrapper>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/article/:id" element={<ArticlePage />} />
           <Route path="/hotline" element={<HotlinePage />} />
@@ -29,7 +29,7 @@ function App() {
 
 const RouteWrapper = ({ children }) => {
   const location = useLocation();
-  const hideLayout = location.pathname === "/"; 
+  const hideLayout = location.pathname === "/login"; 
 
   return (
     <>

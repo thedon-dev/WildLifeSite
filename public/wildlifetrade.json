@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Elephant Ivory Trade",
+    "subtitle": "A Tragic Loss",
+    "description": "Elephants are being hunted for their tusks, fueling the illegal ivory trade. This practice threatens their population and disrupts ecosystems.",
+    "image": "https://th.bing.com/th/id/R.1e89bbe5eed3dd53e530c77324d7285f?rik=UBLQrgjcKB%2fr6Q&pid=ImgRaw&r=0"
+  },
+  {
+    "id": 2,
+    "title": "Tiger Poaching Crisis",
+    "subtitle": "Endangered Majesty",
+    "description": "Bengal tigers face extinction due to illegal poaching for their pelts and bones, which are sold in black markets.",
+    "image": "https://th.bing.com/th/id/OIP.tt5rt7Ml1myDQpdRksq-xQHaE8?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 3,
+    "title": "Bird Smuggling Network",
+    "subtitle": "The Illegal Cage Trade",
+    "description": "Thousands of migratory birds are captured and sold illegally as exotic pets, disrupting their natural migration patterns.",
+    "image": "https://th.bing.com/th/id/OIP.HgWmYGRouldfMVqkh1bE4AHaEo?rs=1&pid=ImgDetMain"
+  }
+]

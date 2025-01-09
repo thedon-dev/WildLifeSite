@@ -27,16 +27,16 @@ const Home = () => {
             <div className="flex flex-col gap-4 p-8 bg-[#4343a9] text-white">
               <h5 className="font-bold text-gray-400">Slection List</h5>
               <div className="flex flex-col divide-y-2 text-sm md:text-lg">
-                <a href="" className="py-3">
+                <a href="#wildlifevideo" className="py-3">
                   WildLife Video
                 </a>
-                <a href="" className="py-3">
+                <a href="#wildlifetrade" className="py-3">
                   WildLife Trade
                 </a>
-                <a href="" className="py-3">
+                <a href="#hotline" className="py-3">
                   Hotline
                 </a>
-                <a href="" className="py-3">
+                <a href="#articles" className="py-3">
                   Articles and News
                 </a>
               </div>

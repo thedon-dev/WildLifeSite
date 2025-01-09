@@ -15,7 +15,7 @@ const LoginPage = () => {
 
     try {
       await authenticateUser(email, password); 
-      navigate("/home"); 
+      navigate("/"); 
     } catch (err) {
       setError(err);
     } finally {

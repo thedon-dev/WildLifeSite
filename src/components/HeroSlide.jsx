@@ -9,7 +9,7 @@ const HeroSlide = () => {
     axios
       .get("/wildlifevideos.json")
       .then((response) => {
-        setVideos(response.data); 
+        setVideos(response.data);
       })
       .catch((error) => {
         console.error("Error fetching videos:", error);
@@ -35,15 +35,22 @@ const HeroSlide = () => {
   const currentVideo = videos[presentSlide];
 
   return (
-    <section className="md:pr-[5%] lg:pr-[10%] mt-28 lg:h-[30rem]">
+    <section
+      id="wildlifevideo"
+      className="md:pr-[5%] lg:pr-[10%] mt-28 lg:h-[30rem]"
+    >
       <div className="flex flex-col lg:flex-row justify-between 2xl:container mx-auto">
         <div className="w-full lg:w-1/2 h-[30rem]">
-          <video
-            src={currentVideo.videoUrl}
+          <iframe
+            src={`https://www.youtube.com/embed/${currentVideo.videoUrl
+              .split("/")
+              .pop()}?autoplay=1&mute=1`}
             className="w-full h-full"
-            controls
-            autoPlay
-          ></video>
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="Wildlife Video"
+          ></iframe>
         </div>
         <div className="p-8 w-full md:p-10 lg:w-1/2 md:h-[30rem] flex flex-col mt-auto bg-gray-700 text-white">
           <div className="md:mt-auto">
@@ -53,7 +60,6 @@ const HeroSlide = () => {
             <h2 className="text-4xl font-bold">{currentVideo.heading}</h2>
             <p>{currentVideo.description}</p>
           </div>
-          {/* Navigation Buttons */}
           <div className="mt-20 flex justify-between items-center">
             <div className="flex gap-4">
               <button
