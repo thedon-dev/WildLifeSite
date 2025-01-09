@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const HotlinePage = () => {
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+
+  })
   return (
     <section className="bg-gray-100 pt-10 pb-24">
       <div className="container mx-auto px-5">

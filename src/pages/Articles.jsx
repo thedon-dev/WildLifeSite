@@ -1,53 +1,23 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const ArticlesPage = () => {
-  const [articles, setArticles] = useState([
-    {
-      "id": 1,
-      "title": "Saving the Endangered Rhino",
-      "description": "Explore the journey and challenges faced in protecting one of the most endangered species on Earth.",
-      "content": "Rhinos are among the most threatened species in the world, facing poaching and habitat loss. Through conservation efforts, dedicated teams are working tirelessly to ensure their survival for future generations...",
-      "image": "https://example.com/rhino.jpg",
-      "link": "/article/1"
-    },
-    {
-      "id": 2,
-      "title": "The Journey of Migrating Elephants",
-      "description": "Learn about the incredible migration of elephants across Africa.",
-      "content": "Elephants embark on one of the most extraordinary migrations on Earth. Driven by seasons and survival instincts, their journey showcases the strength and perseverance of these majestic creatures...",
-      "image": "https://example.com/elephants.jpg",
-      "link": "/article/2"
-    },
-    {
-      "id": 3,
-      "title": "The Secret Life of Tigers",
-      "description": "An in-depth look into the behaviors and habits of wild tigers.",
-      "content": "Tigers are solitary and territorial animals. This article explores their hunting patterns, mating rituals, and the challenges they face due to habitat destruction and poaching...",
-      "image": "https://example.com/tigers.jpg",
-      "link": "/article/3"
-    }
-  ]);
+  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false); 
 
-//   useEffect(() => {
-//     fetch("/articles.json") 
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw new Error("Failed to fetch articles");
-//         }
-//         return response.json();
-//       })
-//       .then((data) => {
-//         setArticles(data);
-//         setLoading(false); 
-//       })
-//       .catch((error) => {
-//         console.error("Error fetching articles:", error);
-//         setLoading(false); 
-//       });
+  useEffect(() => {
+    const fetchArticles = async()=> {
+      try {
+        const response = await axios.get("/articles.json")
+      console.log(response.data)
+      setArticles(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
 
-//     window.scrollTo(0, 0);
-//   }, []);
+    fetchArticles()
+  }, []);
 
   if (loading) {
     return (

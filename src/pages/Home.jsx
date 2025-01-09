@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSlide from "../components/HeroSlide";
 import Section2 from "../components/Section2";
 import Section3 from "../components/Section3";
@@ -6,6 +6,10 @@ import Section4 from "../components/Section4";
 import Footer from "../components/Footer";
 
 const Home = () => {
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+
+  })
   return (
     <>
       <div className="py-16 md:py-24 px-[5%] lg:px-[10%]">

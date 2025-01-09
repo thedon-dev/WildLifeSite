@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const ArticlePage = () => {
-  const { id } = useParams(); // Get the ID from the URL
+  const { id } = useParams(); 
   const [story, setStory] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/articles.json") // Fetch from the local JSON file
+    fetch("/articles.json") 
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch story.");
         return response.json();
@@ -21,6 +21,8 @@ const ArticlePage = () => {
         console.error("Error fetching story:", error);
         setLoading(false);
       });
+    window.scrollTo(0, 0);
+
   }, [id]);
 
   if (loading) {
