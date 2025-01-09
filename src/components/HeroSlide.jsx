@@ -15,7 +15,7 @@ const HeroSlide = () => {
             backgroundPosition: "center",
           }}
         >
-          {/* <img src={img} alt="" className="object-cover"/> */}
+          <video src=""></video>
         </div>
         <div className="p-8 w-full md:p-10 lg:w-1/2 md:h-[30rem] flex flex-col mt-auto bg-gray-700 text-white">
           <div className="md:mt-auto">
