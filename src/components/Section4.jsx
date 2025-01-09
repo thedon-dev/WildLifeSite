@@ -1,110 +1,42 @@
-import React from "react";
-import img from "../assets/22.jpeg";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Section4 = () => {
+const ArticlesPage = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch("/articles.json")
+      .then((response) => response.json())
+      .then((data) => setArticles(data.articles))
+      .catch((error) => console.error("Error fetching articles:", error));
+  }, []);
+
   return (
-    <section id="article" className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
+    <section className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
       <div className="2xl:container mx-auto">
-        <div>
-          <span className="font-semibold text-lg">4 - Article And News</span>
-          <div className="flex flex-col md:flex-row gap-10 mt-5">
-            <h1 className="text-5xl md:text-7xl font-bold md:w-1/2">
-              We provide all information about wild life
-            </h1>
-            <div className="md:w-1/2 mt-auto">
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem placeat aliquid harum quas eos nulla delectus
-                possimus! Dolorum, laudantium recusandae.
-              </p>
-              <div className="mt-10">
-                <Link to="/articles" className="px-5 py-3 bg-[#4343a9] text-white">
-                  See More
+        <h1 className="text-4xl font-bold mb-10">Articles</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          {articles.map((article) => (
+            <div
+              key={article.id}
+              className="bg-white shadow-md rounded-lg p-5 border border-gray-200"
+            >
+              <h2 className="text-2xl font-semibold mb-3">{article.title}</h2>
+              <p className="text-gray-600">{article.description}</p>
+              <div className="mt-5">
+                <Link
+                  to={`/articles/${article.id}`}
+                  className="text-blue-500 hover:underline"
+                >
+                  Read More
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-auto mt-10 gap-3 h-auto">
-          {/* Article 1 */}
-          <div className="text-white col-span-1 row-span-1 px-3 py-5 bg-gray-600">
-            <h2 className="text-xl sm:text-2xl">Name Of Article</h2>
-            <div className="mt-5">
-              <a
-                href=""
-                className="text-sm px-5 py-2 bg-transparent text-white border border-white rounded"
-              >
-                See More
-              </a>
-            </div>
-          </div>
-
-          {/* Article 2 - Larger item */}
-          <div
-            className="col-span-1 sm:col-span-2 md:col-span-1 row-span-2  flex"
-            style={{
-              backgroundImage: `url(${img})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="text-white bg-gray-700 w-full mt-auto px-5 py-5">
-              <h2 className="text-xl sm:text-2xl">Name Of Article</h2>
-              <div className="mt-5">
-                <a
-                  href=""
-                  className="text-sm px-5 py-2 bg-transparent border border-white rounded"
-                >
-                  See More
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Article 3 */}
-          <div className="col-span-1 row-span-1  px-3 py-5 bg-gray-500">
-            <h2 className="text-xl sm:text-2xl">Name Of Article</h2>
-            <div className="mt-5">
-              <a
-                href=""
-                className="text-sm px-5 py-2 bg-transparent border border-white rounded"
-              >
-                See More
-              </a>
-            </div>
-          </div>
-
-          {/* Article 4 */}
-          <div className="col-span-1 row-span-1 px-3 py-5 bg-gray-500">
-            <h2 className="text-xl sm:text-2xl">Name Of Article</h2>
-            <div className="mt-5">
-              <a
-                href=""
-                className="text-sm px-5 py-2 bg-transparent border border-white rounded"
-              >
-                See More
-              </a>
-            </div>
-          </div>
-
-          {/* Article 5 */}
-          <div className="col-span-1 row-span-1 px-3 py-5 bg-gray-500">
-            <h2 className="text-xl sm:text-2xl">Name Of Article</h2>
-            <div className="mt-5">
-              <a
-                href=""
-                className="text-sm px-5 py-2 bg-transparent border border-white rounded"
-              >
-                See More
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Section4;
+export default ArticlesPage;
