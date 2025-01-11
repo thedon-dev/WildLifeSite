@@ -27,8 +27,8 @@ const Home = () => {
             <div className="flex flex-col gap-4 p-8 bg-[#4343a9] text-white">
               <h5 className="font-bold text-gray-400">Slection List</h5>
               <div className="flex flex-col divide-y-2 text-sm md:text-lg">
-                <a href="#wildlifevideo" className="py-3">
-                  WildLife Video
+                <a href="#wildlifeimages" className="py-3">
+                  WildLife Images
                 </a>
                 <a href="#wildlifetrade" className="py-3">
                   WildLife Trade
@@ -53,3 +53,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+

@@ -36,26 +36,24 @@ const HeroSlide = () => {
 
   return (
     <section
-      id="wildlifevideo"
+      id="wildlifeimages"
       className="md:pr-[5%] lg:pr-[10%] mt-28 lg:h-[30rem]"
     >
       <div className="flex flex-col lg:flex-row justify-between 2xl:container mx-auto">
         <div className="w-full lg:w-1/2 h-[30rem]">
-          <iframe
-            src={`https://www.youtube.com/embed/${currentVideo.videoUrl
-              .split("/")
-              .pop()}?autoplay=1&mute=1`}
+          <div
+            style={{
+              backgroundImage: `url(${currentVideo.imageUrl})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
             className="w-full h-full"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Wildlife Video"
-          ></iframe>
+          />
         </div>
         <div className="p-8 w-full md:p-10 lg:w-1/2 md:h-[30rem] flex flex-col mt-auto bg-gray-700 text-white">
           <div className="md:mt-auto">
             <h3 className="font-semibold">
-              {presentSlide + 1} - Wildlife Video
+                1 - Wildlife Images
             </h3>
             <h2 className="text-4xl font-bold">{currentVideo.heading}</h2>
             <p>{currentVideo.description}</p>
