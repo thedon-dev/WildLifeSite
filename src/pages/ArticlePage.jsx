@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const ArticlePage = () => {
@@ -47,6 +47,7 @@ const ArticlePage = () => {
   return (
     <section className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
       <div className="2xl:container mx-auto">
+      <img className="mb-6 w-80 h-80 object-cover " src={story.image} alt="" />
         <h1 className="text-4xl font-bold mb-10">{story.title}</h1>
         <p className="text-gray-600 mb-5">{story.description}</p>
         <div className="text-gray-800">{story.content}</div>
