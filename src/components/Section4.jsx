@@ -65,7 +65,7 @@ const ArticlesPage = () => {
   return (
     <section id="articles" className="bg-gray-100 py-20 px-[5%] lg:px-[10%]">
       <div className="2xl:container mx-auto">
-        <h1 className="text-4xl font-bold mb-10">Articles</h1>
+        <h1 className="text-4xl font-bold mb-10">Events</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {articles.map((article) => (
             <div
