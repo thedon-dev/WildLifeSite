@@ -60,9 +60,9 @@ const Section3 = () => {
             <p>{currentSave.description}</p>
           </div>
           <div className="mt-10 mb-5 flex justify-between items-center">
-            <Link to="/hotline" className="px-10 py-3 bg-[#4343a9] text-white">
+            {/* <Link to="/hotline" className="px-10 py-3 bg-[#4343a9] text-white">
               See More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

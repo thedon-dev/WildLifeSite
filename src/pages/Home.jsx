@@ -23,7 +23,7 @@ const Home = () => {
             protect animals from poaching, protect the future of animal
             diversity as living things on earth.
           </p>
-          <div className="absolute right-0 md:right-36 top-full md:top-1/2">
+          {/* <div className="absolute right-0 md:right-36 top-full md:top-1/2">
             <div className="flex flex-col gap-4 p-8 bg-[#4343a9] text-white">
               <h5 className="font-bold text-gray-400">Slection List</h5>
               <div className="flex flex-col divide-y-2 text-sm md:text-lg">
@@ -41,7 +41,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <HeroSlide />
