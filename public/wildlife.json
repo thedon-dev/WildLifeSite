@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Red Fox",
+    "img": "redFox",
+    "id": 1
+  },
+  {
+    "name": "European Hedgehog",
+    "img": "europeanHedgehog",
+    "id": 2
+  },
+  {
+    "name": "European Badger",
+    "img": "europeanBadger",
+    "id": 3
+  },
+  {
+    "name": "Red Squirrel",
+    "img": "redSquirrel",
+    "id": 4
+  },
+  {
+    "name": "Barn Owl",
+    "img": "barnOwl",
+    "id": 5
+  },
+  {
+    "name": "European Otter",
+    "img": "europeanOtter",
+    "id": 6
+  },
+  {
+    "name": "Scottish Wildcat",
+    "img": "scottishWildcat",
+    "id": 7
+  }
+]

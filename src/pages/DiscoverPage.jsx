@@ -27,7 +27,7 @@ const DiscoverMorePage = () => {
         </p>
         <div className="mt-10">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Deer_in_Richmond_Park%2C_London.jpg"
+            src="https://www.trawell.in/blog/wp-content/uploads/2017/03/Wildlife_Main-730x410.jpg"
             alt="Wildlife Reserve"
             className="w-full rounded-lg shadow-md"
           />

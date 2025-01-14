@@ -1,9 +1,9 @@
 import React from "react";
 import { BiHome, BiInfoCircle } from "react-icons/bi";
-import { BsNewspaper } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
-import { PiPhone } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
+import { GiLion } from "react-icons/gi";
+import { FaChildren } from "react-icons/fa6";
 
 const Navbar = () => {
   const location = useLocation();
@@ -28,22 +28,22 @@ const Navbar = () => {
               <BiHome size={30} className="md:hidden" />
             </Link>
             <Link
-              to="/hotline"
+              to="/kids"
               className={`py-2 px-4 ${
                 isActiveLink("/hotline") ? "text-blue-500" : "text-black"
               }`}
             >
-              <p className="hidden md:flex">Hotline</p>
-              <PiPhone size={30} className="md:hidden" />
+              <p className="hidden md:flex">Kids</p>
+              <FaChildren  size={30} className="md:hidden" />
             </Link>
             <Link
-              to="/articles"
+              to="/animals"
               className={`py-2 px-4 ${
                 isActiveLink("/articles") ? "text-blue-500" : "text-black"
               }`}
             >
-              <p className="hidden md:flex">Article</p>
-              <BsNewspaper size={30} className="md:hidden" />
+              <p className="hidden md:flex">Animals</p>
+              <GiLion  size={30} className="md:hidden" />
             </Link>
             <Link
               to="/about"
